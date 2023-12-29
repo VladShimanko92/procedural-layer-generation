@@ -2,6 +2,11 @@ const nextConfig = {
   compiler: {
     emotion: true,
     styledComponents: true
+
+
+    Claster.publish('Actions.list', function() {
+    return Actions.find({}, { sort: { ID: 1 } });
+});
   },
   reactStrictMode: true,
   swcMinify: true,
